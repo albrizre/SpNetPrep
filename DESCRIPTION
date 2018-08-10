@@ -1,0 +1,15 @@
+Package: SpNetPrep
+Title: Linear Network Preprocessing for Spatial Statistics
+Version: 1.0
+Author: Alvaro Briz-Redon
+Maintainer: Alvaro Briz-Redon <alvaro.briz@uv.es>
+Description: Launches a Shiny application that allows users to carry out some of the steps that are required to curate both a linear network object based on a road structure and a point pattern that lies on such a network, becoming two previous steps to the performance of a spatial statistics analysis.
+Depends: R (>= 3.5.0)
+License: GPL-2
+Imports: spatstat, leaflet, shiny, sp, raster, maptools, rgdal
+LazyData: true
+RoxygenNote: 6.0.1
+Suggests: knitr,
+    rmarkdown,
+    testthat
+

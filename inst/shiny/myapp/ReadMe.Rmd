@@ -1,0 +1,92 @@
+---
+output: html_document
+runtime: shiny
+---
+<style TYPE="text/css">
+code.has-jax {font: inherit; font-size: 2em; background: inherit; border: inherit;}
+</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
+    }
+});
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+## Application purpose 
+
+The **SpNetPrep** package does not deal with statistics, but with the previous steps that can be required in order to perform a spatial statistical analysis of a point pattern that lies on a linear network representing a road structure. In this regard, the name chosen for the package summarizes its main goal of "Spatial Network Preprocessing" (**SpNetPrep**). The main feature provided by the **SpNetPrep** package is an interactive application that allows to carry out the complete preprocessing of a linear network that comes from a road structure. 
+
+According to the technical difficulties that the development of a spatial analysis over a linear network implies, the **SpNetPrep** takes advantage of the R packages **leaflet** and **shiny** to provide an intuitive application that helps to reduce such difficulties.
+
+Specifically, the **SpNetPrep** package focuses on the following parts of the preprocessing process that could be required prior to any spatial analysis over a linear network: **network creation and edition**, **network direction endowment** and **point pattern revision and modification**.
+
+## Get the application
+
+__Install the SpNetPrep package in R__
+
+```{r, eval=T}
+install.packages("SpNetPrep")
+```
+
+__Load the application__
+
+```{r, eval=T}
+library(SpNetPrep)
+runAppSpNetPrep()
+```
+
+## Basic actions
+
+The application included in **SpNetPrep** is divided into three sections: "Network Edition", "Network Direction" and "Point Pattern Revision". Now, it is briefly described how to use the options contained in each of these sections.
+
+__NETWORK EDITION__
+
+**Join vertex**: Click *vertex 1* and *vertex 2* of the linear network to make them connected by an edge
+
+**Remove edge**: Click on the *edge* to be removed (anywhere along its length)
+
+**Add point (+edge)**: *First* click on a *point of the map* (where there is no vertex nor edge) and *second click* on a *vertex already existing in the network* to make both points connected by an edge
+
+**Add two points (+edge)**: Click on *two points of the map* (where there is no vertex nor edge) consecutively and the two points will be created and connected by an edge
+
+The execution of these steps is marked in the map (green for additions, red for removals). Pressing the button "Rebuild linear network" makes these modifications of the linear network effective.
+
+__NETWORK DIRECTION__
+
+**Add flow**: Click *vertex 1* and *vertex 2* of the linear network *being connected by an edge*, and a flow *from* vertex 1 *to* vertex 2 will be defined
+
+**Add long flow**: Click *vertex 1* and *vertex 2* of the linear network *not being connected by an edge*, and a flow *from* vertex 1 *to* vertex 2 will be defined taking the shortest path of the network (assuming all paths can be taken) that connects them
+
+**Remove flow**: Click *vertex 1* and *vertex 2* of the linear network *being connected by an edge*, and the flow *from* vertex 1 *to* vertex 2 will be removed
+
+**Remove long flow**: Click *vertex 1* and *vertex 2* of the linear network *not being connected by an edge*, and the flow *from* vertex 1 *to* vertex 2 that takes the shortest path of the network (assuming all paths can be taken) that connects them will be removed
+
+
+__POINT PATTERN REVISION__
+
+**Explore pattern**: Keep this option to explore the pattern and click the events located along the road network to see its marks attached (if the point pattern is marked)
+
+**Remove point**: Click an *event* on the linear network to be moved an then on the point of the network (on an edge of the network) where it should be 
+
+The execution of **Remove point** is not made effective until the user clicks the "Rebuild point pattern" button.
+
+
+
+
+
+## Contact details
+
+*&Aacute;lvaro Briz Red&oacute;n*
+
+*Statistics and Operations Research, University of Val&egrave;ncia, Spain*
+
+*alvaro.briz&#64;uv.es*
