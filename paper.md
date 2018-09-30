@@ -13,7 +13,7 @@ authors:
 affiliations:
  - name: Statistics and Operations Research, University of València, Spain
    index: 1
-date: 1 October 2018
+date: 30 September 2018
 bibliography: paper.bib
 ---
 
