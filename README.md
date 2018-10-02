@@ -14,5 +14,3 @@ Another important question to take into consideration when working with a linear
 
 Once the network structure is properly curated and endowed with a direction (if necessary), a point pattern can be located along it from a dataset containing geocoded information. This step can be achieved straight by using the (shortest) orthogonal projection of each pair of coordinates into the linear network, for example with the *project2segment* function of the R package **spatstat**, but depending on the level of accuracy of the coordinates available, it can lead to some percentage of events wrongly placed. Therefore, the "Edit a Point Pattern" section of the application allows the user to investigate this issue while providing a whole picture of the distribution of the point pattern in the road network being studied.
 
-
-# References
