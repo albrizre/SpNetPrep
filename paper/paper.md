@@ -7,11 +7,11 @@ tags:
   - traffic data
   - crime data
 authors:
- - name: Álvaro Briz-Redón
+ - name: Alvaro Briz-Redon
    orcid: 0000-0001-7976-3534
    affiliation: 1
 affiliations:
- - name: Statistics and Operations Research, University of València, Spain
+ - name: Statistics and Operations Research, University of Valencia, Spain
    index: 1
 date: 30 September 2018
 bibliography: paper.bib
@@ -46,7 +46,7 @@ Once the network structure is properly curated and endowed with a direction (if 
 
 
 
-The author wishes to thank Mrs Daymé González-Rodríguez, Dr Francisco Martínez-Ruiz and Dr Francisco Montes for providing feedback regarding **SpNetPrep** package functionalities.
+The author wishes to thank Mrs Dayme Gonzalez-Rodriguez, Dr Francisco Martinez-Ruiz and Dr Francisco Montes for providing feedback regarding **SpNetPrep** package functionalities.
 
 
 
